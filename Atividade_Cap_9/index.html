@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Fintech</title>
+
+    <!-- Linkando Bootstrap CSS via Download -->
+    <link rel="stylesheet" href="./Assets/CSS/bootstrap.min.css">
+    <!-- Linkando Bootstrap CSS via Web(CDN server) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+
+    <!-- Linkar a CSS com o HTML -->
+    <link rel="stylesheet" href="./Assets/CSS/styles.css">
+    <link rel="stylesheet" href="./Assets/CSS/variables.css">
+
+    <!-- Linkando o Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- Linkando o Font Awesome p/ ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Salva<span class="logo">Bolso</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Recebimentos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-list"></i>  Lista</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus"></i>  Novo</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square"></i>  Editar/Excluir</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gastos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-list"></i>  Lista</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus"></i>  Novo</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square"></i>  Editar/Excluir</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Balanços
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-chart-line"></i>  Gráficos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-list"></i>  Lista</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Contato</a>
+              </li>
+              <li>
+                <button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-user"></i> Minha conta</button>
+                
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+
+      <!-- Seção de saldo -->
+      <div class="d-flex flex-row mb-3 justify-content-between align-items-center border" id="saldo">
+        <div class="p-2 ms-1 fw-semibold fs-4">Saldo</div>
+        <div class="p-2 fs-4 fw-bold text-success">+R$460,00</div>
+        <div class="p-2 fs-4">de 01/02 a 10/02</div>
+        <div class="p-2"><a href="#"><button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-info"></i></button></a></div>
+      </div>
+
+      <!-- Seção de entradas -->
+      <div class="container-fluid border pe-4">
+        <div class="row">
+          <div class="col-12 text-start fw-semibold fs-4 mt-2">
+            Entradas
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-4 fw-bold text-success text-start ps-2 fs-2" id="">+R$1.200,00</div>
+          <div class="col-7">
+            <table class="table table-success table-striped table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">01/02</th>
+                  <td>R$35,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">04/02</th>
+                  <td>R$245,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">07/02</th>
+                  <td>R$355,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-1 mb-2"><a href="#"><button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-info"></i></button></a></div>
+        </div>
+      </div>
+
+      <!-- Seção de saídas -->
+      <div class="container-fluid border pe-4">
+        <div class="row">
+          <div class="col-12 text-start fw-semibold fs-4 mt-2">
+            Saídas
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-4 fw-bold text-danger text-start ps-2 fs-2" id="valor">-R$740,00</div>
+          <div class="col-7">
+            <table class="table table-danger table-striped table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">02/02</th>
+                  <td>R$14,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">05/02</th>
+                  <td>R$175,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">07/02</th>
+                  <td>R$117,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-1 mb-2 pe-0"><a href="#"><button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-info"></i></button></a></div>
+        </div>
+      </div>
+
+      <!-- Seção de metas -->
+      <div class="container-fluid border pe-4">
+        <div class="row">
+          <div class="col-12 text-start fw-semibold fs-4 my-2">
+            Metas
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-11">
+            <table class="table table-secondary table-striped table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">Meta 01</th>
+                  <td>R$2.800,00 de R$5.000,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Meta 02</th>
+                  <td>R$14.000,00 de R$75.000,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Meta 03</th>
+                  <td>R$28.000,00 de R$500.000,00</td>
+                  <td class="text-end pe-5"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#"><i class="fa-solid fa-info"></i></button></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-1 mb-2 pe-0"><a href="#"><button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-info"></i></button></a></div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 my-3">
+                <div class="card">
+                    <img src="./Assets/Images/pexels-lukas-590041.jpg" class="card-img-top" alt="Show 01">
+                    <div class="card-body">
+                        <h5 class="card-title">Obter relatórios</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, veritatis culpa aliquid ab sunt molestiae nihil ea. Libero, aliquid exercitationem.</p>
+                        <a href="#" class="btn btn-outline-info">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 my-3">
+                <div class="card">
+                    <img src="./Assets/Images/pexels-ono-kosuki-5999936.jpg" class="card-img-top" alt="Show 02">
+                    <div class="card-body">
+                        <h5 class="card-title">Vincular contas</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, veritatis culpa aliquid ab sunt molestiae nihil ea. Libero, aliquid exercitationem.</p>
+                        <a href="#" class="btn btn-outline-info">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 my-3">
+                <div class="card">
+                    <img src="./Assets/Images//pexels-dom-j-45111.jpg" class="card-img-top" alt="Show 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Vincular cartões</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, veritatis culpa aliquid ab sunt molestiae nihil ea. Libero, aliquid exercitationem.</p>
+                        <a href="#" class="btn btn-outline-info">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 my-3">
+                <div class="card">
+                    <img src="./Assets/Images/pexels-pixabay-210607.jpg" class="card-img-top" alt="Show 04">
+                    <div class="card-body">
+                        <h5 class="card-title">Vincular investimentos</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, veritatis culpa aliquid ab sunt molestiae nihil ea. Libero, aliquid exercitationem.</p>
+                        <a href="#" class="btn btn-outline-info">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="container-flex bg-color-dark text-center">
+        Todos os direitos reservados - SalvaBolso (2023)
+      </div>
+    </footer>
+
+  <!-- Linkando Bootstrap JS via Download -->
+  <script src="./Assets/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
